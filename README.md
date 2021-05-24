@@ -57,6 +57,9 @@ os dados dos pacientes. Os dados dos pacientes seram gravados na base de dados c
 dados medcloud2.
     
    ```
+   
+   OBS: Em casa caso em que um arquivo xml é gerado, o sistema lê esse arquivo gerado e depois de capturar os dados (nome de cada paciente) ele é persistido na segunda
+   base de dados
 
 <!-- CONTACT -->
 ## Contato
