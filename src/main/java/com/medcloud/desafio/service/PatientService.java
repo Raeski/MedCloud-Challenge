@@ -53,7 +53,7 @@ public class PatientService {
 
             List<Patient> byName = patientRepository.findByName(namePatient);
 
-            if(byName == null) {
+            if(byName.isEmpty()) {
                 throw new BadRequestException("Patient not found");
             } else {
                 System.out.println(byName);
