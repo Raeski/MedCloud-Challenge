@@ -36,4 +36,7 @@ public class Adress {
     private String ddd;
 
     private String siafi;
+
+    public Adress(String teste, String teste1, String teste2, String teste3, String teste4, String teste5, String teste6, String teste7, String teste8, String teste9) {
+    }
 }

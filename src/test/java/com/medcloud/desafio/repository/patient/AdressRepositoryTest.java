@@ -9,28 +9,28 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
-@DisplayName("Testes para repositório patient")
-class PatientRepositoryTest {
+@DisplayName("Testes para repositório adress")
+class AdressRepositoryTest {
 
     @Autowired
-    private PatientRepository patientRepository;
-
+    private AdressRepository adressRepository;
 
     @Test
     @DisplayName("Persistir paciente em banco")
     void save_PersistPatient_WhenSuccessful(){
-        Patient patientToBeSaved = PatientCreator.createPatientToBeSaved();
+        Adress adressToBeSaved = createAdress;
 
-        Patient patientSaved = this.patientRepository.save(patientToBeSaved);
+        Adress adressSaved = this.adressRepository.save(adressToBeSaved);
 
-        Assertions.assertThat(patientSaved).isNotNull();
-        Assertions.assertThat(patientSaved.getId()).isNotNull();
+        Assertions.assertThat(adressSaved).isNotNull();
+        Assertions.assertThat(adressSaved.getId()).isNotNull();
 
     }
+
+     Adress createAdress = new Adress( "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste");
+
 
 }
